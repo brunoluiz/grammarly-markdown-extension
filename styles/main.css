@@ -1,0 +1,27 @@
+body {
+  padding: 8px 10px;
+  font-family: sans-serif;
+  width: 200px;
+}
+
+h1 {
+  font-size: 1.25em;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  margin-top: 8px;
+}
+
+.success {
+  color: #389e0d
+}
+
+.error {
+  color: #fa541c
+}
+
+#message {
+  font-weight: 600;
+}
