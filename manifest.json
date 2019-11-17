@@ -5,7 +5,7 @@
   "author": "Bruno Luiz Silva <contact@brunoluiz.net>",
   "version": "1.0.0",
   "content_scripts": [{
-      "matches": ["<all_urls>"],
+      "permissions": ["https://app.grammarly.com/ddocs/*"],
       "all_frames": true,
       "js":      ["vendor/turndown/turndown.js" ,"scripts/content.js"]
   }],
