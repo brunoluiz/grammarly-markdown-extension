@@ -16,7 +16,8 @@
     }
   },
   "permissions": [
-     "tabs"
+     "tabs",
+     "clipboardWrite"
   ],
   "icons": {
     "48": "icon-48.png",
