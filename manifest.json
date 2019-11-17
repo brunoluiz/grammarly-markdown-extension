@@ -4,11 +4,13 @@
   "description": "🖋 Convert Grammarly to Markdown, sending it to Clipboard",
   "author": "Bruno Luiz Silva <contact@brunoluiz.net>",
   "version": "1.0.0",
-  "content_scripts": [{
-      "permissions": ["https://app.grammarly.com/ddocs/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://app.grammarly.com/ddocs/*"],
       "all_frames": true,
       "js":      ["vendor/turndown/turndown.js" ,"scripts/content.js"]
-  }],
+    }
+  ],
   "browser_action": {
     "default_popup": "action.html",
     "default_icon": {
@@ -17,8 +19,9 @@
     }
   },
   "permissions": [
-     "activeTab",
-     "clipboardWrite"
+    "activeTab",
+    "clipboardWrite",
+    "https://app.grammarly.com/ddocs/*"
   ],
   "icons": {
     "48": "icon-48.png",
