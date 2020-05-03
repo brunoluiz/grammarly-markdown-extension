@@ -6,7 +6,7 @@
   "version": "1.0.0",
   "content_scripts": [
     {
-      "matches": ["https://app.grammarly.com/ddocs/*"],
+      "matches": ["https://app.grammarly.com/*"],
       "all_frames": true,
       "js":      ["scripts/content.js"]
     }
@@ -21,7 +21,7 @@
   "permissions": [
     "activeTab",
     "clipboardWrite",
-    "https://app.grammarly.com/ddocs/*"
+    "https://app.grammarly.com/*"
   ],
   "icons": {
     "48": "icon-48.png",
