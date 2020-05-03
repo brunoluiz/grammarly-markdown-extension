@@ -8,7 +8,7 @@
     {
       "matches": ["https://app.grammarly.com/ddocs/*"],
       "all_frames": true,
-      "js":      ["vendor/turndown/turndown.js" ,"scripts/content.js"]
+      "js":      ["scripts/content.js"]
     }
   ],
   "browser_action": {
