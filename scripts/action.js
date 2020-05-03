@@ -5,10 +5,10 @@ const turndownService = new TurndownService({
   headingStyle: "atx",
   linkStyle: "referenced",
   bulletListMarker: "-",
-  br: ""
+  br: "",
 });
 
-const copyToClipboard = str => {
+const copyToClipboard = (str) => {
   const el = document.createElement("textarea");
   el.value = str;
   document.body.appendChild(el);
@@ -17,21 +17,21 @@ const copyToClipboard = str => {
   document.body.removeChild(el);
 };
 
-const setMessage = data =>
+const setMessage = (data) =>
   setTimeout(() => {
     const el = document.getElementById("message");
     el.innerText = data.msg;
     el.classList.add(data.type);
   }, 500);
 
-document.addEventListener("DOMContentLoaded", function() {
-  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-    chrome.tabs.sendMessage(tabs[0].id, {}, function(response = {}) {
+document.addEventListener("DOMContentLoaded", function () {
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, {}, function (response = {}) {
       const { content } = response;
       if (!content) {
         return setMessage({
           msg: "🚨 Error on getting content",
-          type: MESSAGE_ERROR
+          type: MESSAGE_ERROR,
         });
       }
 
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
       } catch (err) {
         return setMessage({
           msg: "🚨 Error on markdown parsing",
-          type: MESSAGE_ERROR
+          type: MESSAGE_ERROR,
         });
       }
     });
