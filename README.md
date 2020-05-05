@@ -11,7 +11,16 @@
 
 ## Development
 
-1. Run `npm install`
+1. Check if your Node.js version is >= 6.
+1. Clone the repository.
+1. Run `npm i`.
+1. Change the package's name and description on `package.json`.
+1. Change the name of your extension on `src/manifest.json`.
 1. Run `npm run start`
+1. Load your extension on Chrome following:
+    1. Access `chrome://extensions/`
+    2. Check `Developer mode`
+    3. Click on `Load unpacked extension`
+    4. Select the `build` folder.
 
-It uses the [chrome-extension-webpack-boilerplate](https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate). It will run a webpack server, with hotreload, for your JS.
+It uses the [chrome-extension-webpack-boilerplate](https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate). It will run a webpack server, with hotreload, for your JS. Follow the instructions 
