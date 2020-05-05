@@ -21,4 +21,4 @@
     3. Click on `Load unpacked extension`
     4. Select the `build` folder.
 
-It uses the [chrome-extension-webpack-boilerplate](https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate). It will run a webpack server, with hotreload, for your JS. Follow the instructions 
+It uses the [chrome-extension-webpack-boilerplate](https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate). It will run a webpack server, with hotreload, for your JS.
