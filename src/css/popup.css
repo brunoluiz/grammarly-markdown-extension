@@ -1,6 +1,6 @@
 body {
   padding: 8px 10px;
-  font-family: sans-serif;
+  font-family: helvetica neue,Helvetica,-apple-system,BlinkMacSystemFont,segoe ui,pingfang sc,hiragino sans gb,microsoft yahei,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
   font-size: 100%;
   width: 200px;
 }
@@ -26,4 +26,16 @@ p {
 
 #message {
   font-weight: 600;
+}
+
+a {
+  color: #1890ff
+}
+
+a:hover {
+  color: #69c0ff
+}
+
+a:active {
+  color: #91d5ff
 }
