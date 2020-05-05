@@ -1,9 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Grammarly to Markdown",
-  "description": "🖋 Convert Grammarly to Markdown, sending it to Clipboard",
   "author": "Bruno Luiz Silva <contact@brunoluiz.net>",
-  "version": "1.1.0",
   "content_scripts": [
     {
       "matches": ["https://app.grammarly.com/*"],
