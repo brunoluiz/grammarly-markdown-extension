@@ -41,8 +41,6 @@ const options = {
   output: {
     path: path.join(__dirname, "build"),
     filename: "[name].bundle.js",
-    library: "chrome-extension",
-    libraryTarget: "umd",
   },
   module: {
     rules: [
