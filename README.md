@@ -13,9 +13,7 @@
 
 1. Check if your Node.js version is >= 6.
 1. Clone the repository.
-1. Run `npm i`.
-1. Change the package's name and description on `package.json`.
-1. Change the name of your extension on `src/manifest.json`.
+1. Run `npm install`.
 1. Run `npm run start`
 1. Load your extension on Chrome following:
     1. Access `chrome://extensions/`
