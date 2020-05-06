@@ -1,3 +1,9 @@
+import * as TurndownService from "turndown/lib/turndown.browser.umd.js";
+
+import "../css/popup.css";
+import "../img/icon-48.png";
+import "../img/icon-128.png";
+
 const MESSAGE_SUCCESS = "success";
 const MESSAGE_ERROR = "error";
 
