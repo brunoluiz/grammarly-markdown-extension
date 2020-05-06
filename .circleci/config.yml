@@ -44,6 +44,7 @@ jobs:
       - restore_cache:
           key: npm-build-{{ .Branch }}-{{ .Revision }}
       - run: npm run deploy:chrome
+      - run: npm run deploy:firefox
 
 workflows:
   version: 2
