@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run: npm ci
       - save_cache:
-          key: npm-deps-{{ checksum 'package-lock.json' }}
+          key: npm-deps-{{ checksum "package-lock.json" }}
           paths:
             - node_modules
 
@@ -21,7 +21,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: npm-deps-{{ checksum 'package-lock.json' }}
+          key: npm-deps-{{ checksum "package-lock.json" }}
       - run: npm run lint
       - run: npm run test
 
@@ -30,8 +30,20 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: npm-deps-{{ checksum 'package-lock.json' }}
+          key: npm-deps-{{ checksum "package-lock.json" }}
       - run: npm run build
+      - run: npx shipit chrome ./build
+      - save_cache:
+          key: npm-build-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - build
+
+  deploy:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: npm-build-{{ .Branch }}-{{ .Revision }}
       - run: npx shipit chrome ./build
 
 workflows:
@@ -51,6 +63,12 @@ workflows:
       - build:
           requires:
             - test
+          filters:
+            branches:
+              ignore: master
+      - deploy:
+          requires:
+            - build
           filters:
             branches:
               ignore: master
