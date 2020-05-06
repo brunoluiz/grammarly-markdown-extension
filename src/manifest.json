@@ -25,5 +25,10 @@
     "48": "icon-48.png",
     "128": "icon-128.png"
   },
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "87677a2c52b84ad3a151a4a72f5bd3c4@jetpack"
+    }
+  }
 }
