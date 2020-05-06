@@ -32,6 +32,7 @@ jobs:
       - restore_cache:
           key: npm-deps-{{ checksum 'package-lock.json' }}
       - run: npm run build
+      - run: npx shipit chrome ./build
 
 workflows:
     version: 2
