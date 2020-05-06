@@ -4,7 +4,7 @@
   "description": "🖋 Convert Grammarly to Markdown (browser extension)",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint scripts/**",
+    "lint": "eslint ./src",
     "build": "node utils/build.js",
     "start": "node utils/webserver.js",
     "test": "echo 'no tests'"
