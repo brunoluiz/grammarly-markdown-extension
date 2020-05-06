@@ -1,9 +1,9 @@
 version: 2
 
 defaults: &defaults
-    working_directory: ~/build
-    docker:
-        - image: circleci/node:14
+  working_directory: ~/build
+  docker:
+    - image: circleci/node:14
 
 jobs:
   init:
@@ -35,22 +35,22 @@ jobs:
       - run: npx shipit chrome ./build
 
 workflows:
-    version: 2
-    development:
-      jobs:
-        - init:
+  version: 2
+  development:
+    jobs:
+      - init:
           filters:
             branches:
               ignore: master
-        - test:
-            requires:
-              - test
-            filters:
-              branches:
-                ignore: master
-        - build:
-            requires:
-              - test
-            filters:
-              branches:
-                ignore: master
+      - test:
+          requires:
+            - init
+          filters:
+            branches:
+              ignore: master
+      - build:
+          requires:
+            - test
+          filters:
+            branches:
+              ignore: master
