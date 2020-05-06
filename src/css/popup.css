@@ -1,0 +1,41 @@
+body {
+  padding: 8px 10px;
+  font-family: helvetica neue,Helvetica,-apple-system,BlinkMacSystemFont,segoe ui,pingfang sc,hiragino sans gb,microsoft yahei,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+  font-size: 100%;
+  width: 200px;
+}
+
+h1 {
+  font-size: 1em;
+  margin: 0;
+}
+
+p {
+  font-size: 0.75em;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.success {
+  color: #389e0d
+}
+
+.error {
+  color: #fa541c
+}
+
+#message {
+  font-weight: 600;
+}
+
+a {
+  color: #1890ff
+}
+
+a:hover {
+  color: #69c0ff
+}
+
+a:active {
+  color: #91d5ff
+}

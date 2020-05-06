@@ -1,18 +1,16 @@
 {
   "manifest_version": 2,
   "name": "Grammarly to Markdown",
-  "description": "🖋 Convert Grammarly to Markdown, sending it to Clipboard",
   "author": "Bruno Luiz Silva <contact@brunoluiz.net>",
-  "version": "1.0.0",
   "content_scripts": [
     {
-      "matches": ["https://app.grammarly.com/ddocs/*"],
+      "matches": ["https://app.grammarly.com/*"],
       "all_frames": true,
-      "js":      ["scripts/content.js"]
+      "js":      ["content.bundle.js"]
     }
   ],
   "browser_action": {
-    "default_popup": "action.html",
+    "default_popup": "popup.html",
     "default_icon": {
       "48": "icon-48.png",
       "128": "icon-128.png"
@@ -21,10 +19,11 @@
   "permissions": [
     "activeTab",
     "clipboardWrite",
-    "https://app.grammarly.com/ddocs/*"
+    "https://app.grammarly.com/*"
   ],
   "icons": {
     "48": "icon-48.png",
     "128": "icon-128.png"
-  }
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
