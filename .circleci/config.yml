@@ -32,7 +32,6 @@ jobs:
       - restore_cache:
           key: npm-deps-{{ checksum "package-lock.json" }}
       - run: npm run build
-      - run: npx shipit chrome ./build
       - save_cache:
           key: npm-build-{{ .Branch }}-{{ .Revision }}
           paths:
@@ -50,25 +49,18 @@ workflows:
   version: 2
   development:
     jobs:
-      - init:
-          filters:
-            branches:
-              ignore: master
+      - init
       - test:
           requires:
             - init
-          filters:
-            branches:
-              ignore: master
       - build:
           requires:
             - test
-          filters:
-            branches:
-              ignore: master
       - deploy:
           requires:
             - build
           filters:
+            tags:
+              only: /^v.*/
             branches:
-              ignore: master
+              ignore: /.*/
