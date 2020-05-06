@@ -43,7 +43,7 @@ jobs:
       - checkout
       - restore_cache:
           key: npm-build-{{ .Branch }}-{{ .Revision }}
-      - run: npx shipit chrome ./build
+      - run: npm run deploy:chrome
 
 workflows:
   version: 2

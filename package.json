@@ -7,7 +7,8 @@
     "lint": "eslint ./src",
     "build": "node utils/build.js",
     "start": "node utils/webserver.js",
-    "test": "echo 'no tests'"
+    "test": "echo 'no tests'",
+    "deploy:chrome": "shipit chrome ./build"
   },
   "repository": {
     "type": "git",
