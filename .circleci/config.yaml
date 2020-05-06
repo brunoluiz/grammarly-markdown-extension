@@ -1,9 +1,9 @@
 version: 2
 
 defaults: &defaults
-    working_directory: ~/build
-    docker:
-        - image: circleci/node:14
+  working_directory: ~/build
+  docker:
+    - image: circleci/node:14
 
 jobs:
   init:
