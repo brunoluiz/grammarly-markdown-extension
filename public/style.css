@@ -44,11 +44,11 @@ a[disabled] {
 }
 
 .divider-big {
-  margin: 10em 0 0;
+  margin: 5em 0;
 }
 
 .divider-medium {
-  margin: 8em 0 0;
+  margin: 4em 0;
 }
 
 .divider-small {
@@ -56,11 +56,10 @@ a[disabled] {
   text-align: center;
 }
 
-.divider-small:before {
+.divider-small.fancy:before {
   content: "\B7\B7\B7";
   letter-spacing: 1em;
 }
-
 
 main {
   padding: 0 50px 0;
