@@ -9,7 +9,8 @@
     "start": "node utils/webserver.js",
     "test": "echo 'no tests'",
     "deploy:chrome": "shipit chrome ./build",
-    "deploy:firefox": "shipit firefox ./build"
+    "deploy:firefox": "shipit firefox ./build",
+    "deploy:landing": "gh-pages --dist ./public "
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "eslint-plugin-prettier": "^3.1.3",
     "file-loader": "4.3.0",
     "fs-extra": "8.1.0",
+    "gh-pages": "^2.2.0",
     "html-loader": "0.5.5",
     "html-webpack-plugin": "3.2.0",
     "prettier": "^2.0.5",
