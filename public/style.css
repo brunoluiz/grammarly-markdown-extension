@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',  Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-variant: tabular-nums;
+  line-height: 1.5;
+  background-color: #fff;
+  -webkit-font-feature-settings: 'tnum';
+  font-feature-settings: 'tnum';
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  color: #1890ff;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  color: #40a9ff;
+}
+
+a:active {
+  color: #096dd9;
+}
+
+a:active, a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+
+a[disabled] {
+  color: rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.divider-big {
+  margin: 10em 0 0;
+}
+
+.divider-medium {
+  margin: 8em 0 0;
+}
+
+.divider-small {
+  margin: 3em 0;
+  text-align: center;
+}
+
+.divider-small:before {
+  content: "\B7\B7\B7";
+  letter-spacing: 1em;
+}
+
+
+main {
+  padding: 0 50px 0;
+  margin-bottom: 5em;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero > h1 {
+  margin: 1em auto 0;
+  font-size: calc(40px + (88 - 40) * (100vw - 320px) / (1920 - 320));
+  max-width: 13ch;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.hero > h2 {
+  margin: 1.5em auto 2em;
+  font-size: calc(22px + (28 - 22) * (100vw - 320px) / (1920 - 320));
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.hero img {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  height: auto;
+  max-width: 939px;
+}
+
+.download-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  color: #33c39a;
+}
+
+
+.a:hover {
+  color: #5bcfae;
+}
+
+.a:active {
+  color: #23886b
+}
+
+.btn {
+  padding: 15px 25px;
+  width: 400px;
+  margin: 10px 10px 0 10px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 4px;
+  background-color: #33c39a;
+  font-weight: 700;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #5bcfae;
+}
+
+.btn:active {
+  background-color: #23886b
+}
+
+.details h2 {
+  margin: 0 auto 1em;
+  font-size: calc(36px + (52 - 36) * (100vw - 320px) / (1920 - 320));
+  text-align: center;
+  font-weight: 700;
+}
+
+.details p {
+  margin: 0 20% 1em;
+  line-height: 2;
+}
+
+@media (max-width: 992px) {
+  main {
+    padding: 0 10px 0;
+  }
+
+  .hero img {
+    max-width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .details p {
+    margin: 0 0 1em;
+  }
+}
