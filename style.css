@@ -71,7 +71,7 @@ main {
 }
 
 .hero > h1 {
-  margin: 1.5em auto 0;
+  margin: 1em auto 0;
   font-size: calc(40px + (88 - 40) * (100vw - 320px) / (1920 - 320));
   max-width: 13ch;
   font-weight: 700;
@@ -148,34 +148,7 @@ a {
   line-height: 2;
 }
 
-.cookies {
-  text-align: center;
-  margin: 0 auto;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 11px;
-  color: #666;
-  display: block;
-  padding: 3px 0;
-}
-
-@media (max-width: 375px) {
-  .cookies span {
-    display: block;
-  }
-}
-
 @media (max-width: 992px) {
-  .hero h1 {
-    margin-top: 2em;
-  }
-
-  .hero h2 {
-    margin-top: 2em;
-  }
-
   main {
     padding: 0 10px 0;
   }
