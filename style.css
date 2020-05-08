@@ -71,7 +71,7 @@ main {
 }
 
 .hero > h1 {
-  margin: 1em auto 0;
+  margin: 1.5em auto 0;
   font-size: calc(40px + (88 - 40) * (100vw - 320px) / (1920 - 320));
   max-width: 13ch;
   font-weight: 700;
@@ -146,6 +146,21 @@ a {
 .details p {
   margin: 0 20% 1em;
   line-height: 2;
+}
+
+.cookies {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 11px;
+  color: #666;
+  display: block;
+  background: #fafafa;
+  box-shadow: 0 3px 10px #eee;
+  padding: 3px 0;
 }
 
 @media (max-width: 992px) {
