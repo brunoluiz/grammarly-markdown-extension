@@ -66,5 +66,13 @@
       <p>If you found a bug, want to suggest a feature or even implement some improvement, <a href='https://github.com/brunoluiz/grammarly-to-markdown' title='Project Github page' target='_blank'>please have a look at this project on Github</a>.</p>
     <section/>
   </main>
+  <script>
+    const path = "u=" + encodeURIComponent(window.location.href);
+    const referrer = document.referrer ? "&r=" + encodeURIComponent(document.referrer) : ""
+    const time = "&t=" + (new Date()).getTime()
+
+    const _pixel = new Image(1, 1);
+    _pixel.src = 'https://goaccess.snapdiff.com/pixel?' + path + referrer + time;
+  </script>
 </body>
 </html>
