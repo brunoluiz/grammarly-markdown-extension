@@ -63,7 +63,6 @@ a[disabled] {
 
 main {
   padding: 0 50px 0;
-  margin-bottom: 5em;
 }
 
 .hero {
@@ -136,16 +135,41 @@ a {
   background-color: #23886b
 }
 
-.details h2 {
+.landing-block h2 {
   margin: 0 auto 1em;
   font-size: calc(36px + (52 - 36) * (100vw - 320px) / (1920 - 320));
   text-align: center;
   font-weight: 700;
 }
 
-.details p {
+.landing-block p {
   margin: 0 20% 1em;
   line-height: 2;
+}
+
+footer {
+  text-align: center;
+  margin: 5em auto 2em;
+}
+
+footer ul {
+  margin: 0 auto;
+  padding: 0;
+}
+
+footer li {
+  display: inline;
+}
+
+footer li:before {
+  content: "|";
+  color: #aaa;
+  margin: 0 5px;
+}
+
+footer li:first-child:before {
+  content: "";
+  margin: 0;
 }
 
 @media (max-width: 992px) {
@@ -175,7 +199,17 @@ a {
     width: 100%;
   }
 
-  .details p {
+  .landing-block p {
     margin: 0 0 1em;
+  }
+
+  footer li {
+    display: block;
+    margin-top: 15px;
+  }
+
+  footer li:before {
+    content: "";
+    margin: 0;
   }
 }
