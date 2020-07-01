@@ -14,6 +14,16 @@ const turndownService = new TurndownService({
   br: "",
 });
 
+turndownService.addRule("h1", {
+  filter: ["h1"],
+  replacement: (content) => `## ${content}\n`,
+});
+
+turndownService.addRule("h2", {
+  filter: ["h2"],
+  replacement: (content) => `### ${content}\n`,
+});
+
 const copyToClipboard = (str) => {
   const el = document.createElement("textarea");
   el.value = str;
@@ -33,7 +43,7 @@ const setMessage = (data) =>
 document.addEventListener("DOMContentLoaded", function () {
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     chrome.tabs.sendMessage(tabs[0].id, {}, function (response = {}) {
-      const { content } = response;
+      const { content, title } = response;
       if (!content) {
         return setMessage({
           msg: "🚨 Error on getting content",
@@ -42,7 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       try {
-        const markdown = turndownService.turndown(content);
+        let markdown = "";
+        markdown += `# ${title}\n\n`;
+        markdown += turndownService.turndown(content);
         copyToClipboard(markdown);
         setMessage({ msg: "📋 Copied to clipboard", type: MESSAGE_SUCCESS });
       } catch (err) {
