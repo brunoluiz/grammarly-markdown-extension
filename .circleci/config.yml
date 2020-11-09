@@ -46,7 +46,7 @@ jobs:
       - restore_cache:
           key: npm-build-{{ .Branch }}-{{ .Revision }}
       - run: npm run deploy:chrome
-      # - run: npm run deploy:firefox (disable firefox for now)
+      - run: npm run deploy:firefox (disable firefox for now)
 
 workflows:
   version: 2
