@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Grammarly to Markdown: Options</title>
-        <link rel='stylesheet' href='./styles/main.css' />
+      <title>Grammarly to Markdown: Options</title>
     </head>
     <body>
-        <h1>Grammarly to Markdown</h1>
+      <h1>Grammarly to Markdown</h1>
 
-        <label for="turndown-linkSyle">Choose link style:</label>
-        <select name="turndown-linkSyle" id="turndown-linkSyle">
-            <option value="referenced">Referenced</option>
-            <option value="inlined">Inlined</option>
-        </select>
-        <button id="save">Save</button>
 
-        <p><a href='https://brunoluiz.net' target='_blank'>By Bruno Luiz Silva</a></p>
-        <script src="options.js"></script>
+      <label for="turndown-linkSyle">Choose link style:</label>
+      <select name="turndown-linkSyle" id="turndown-linkSyle">
+          <option value="referenced">Referenced</option>
+          <option value="inlined">Inlined</option>
+      </select>
+      </br>
+
+      <label for="turndown-bulletListMarker">Choose list style:</label>
+      <select name="turndown-bulletListMarker" id="turndown-bulletListMarker">
+          <option value="-">Dash -</option>
+          <option value="*">Asterisk *</option>
+          <option value="+">Plus +</option>
+      </select>
+      </br>
+
+      <label for="turndown-emDelimiter">Choose <em>italic</em> style:</label>
+      <select name="turndown-emDelimiter" id="turndown-emDelimiter">
+          <option value="_">Underscore _</option>
+          <option value="*">Asterisk *</option>
+      </select>
+      </br>
+
+      <label for="turndown-strongDelimiter">Choose <strong>bold</strong> style:</label>
+      <select name="turndown-strongDelimiter" id="turndown-strongDelimiter">
+          <option value="**">Asterisk **</option>
+          <option value="__">Underscore __</option>
+      </select>
+      </br>
+
+      <label for="turndown-escapeBackticks">Escape (`) backticks?</label>
+      <input type="checkbox" id="turndown-escapeBackticks" name="turndown-escapeBackticks" value="0">
+      </br>
+
+      <button id="save">Save</button>
+
+      <p><a href='https://brunoluiz.net' target='_blank'>By Bruno Luiz Silva</a></p>
+      <script src="options.js"></script>
     </body>
 </html>
