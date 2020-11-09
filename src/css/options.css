@@ -1,0 +1,33 @@
+body {
+  font-family: helvetica neue,Helvetica,-apple-system,BlinkMacSystemFont,segoe ui,pingfang sc,hiragino sans gb,microsoft yahei,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+  font-size: 100%;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+label, p {
+  font-size: 13px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+input, select {
+  margin-bottom: 5px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+a {
+  color: #1890ff
+}
+
+a:hover {
+  color: #69c0ff
+}
+
+a:active {
+  color: #91d5ff
+}
+
