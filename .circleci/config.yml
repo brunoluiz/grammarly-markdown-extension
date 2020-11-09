@@ -31,7 +31,7 @@ jobs:
       - checkout
       - restore_cache:
           key: npm-deps-{{ checksum "package-lock.json" }}
-      - run: npm run build
+      - run: NODE_ENV=production npm run build
       - save_cache:
           key: npm-build-{{ .Branch }}-{{ .Revision }}
           paths:
