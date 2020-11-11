@@ -46,7 +46,17 @@ jobs:
       - restore_cache:
           key: npm-build-{{ .Branch }}-{{ .Revision }}
       - run: npm run deploy:chrome
-      - run: npm run deploy:firefox (disable firefox for now)
+      - run: npm run deploy:firefox
+
+  deploy-firefox:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: npm-deps-{{ checksum "package-lock.json" }}
+      - restore_cache:
+          key: npm-build-{{ .Branch }}-{{ .Revision }}
+      - run: npm run deploy:firefox
 
 workflows:
   version: 2
@@ -83,5 +93,14 @@ workflows:
           filters:
             tags:
               only: /v[0-9]+(\.[0-9]+)*(-.*)*/
+            branches:
+              ignore: /.*/
+
+      - deploy-firefox:
+          requires:
+            - build
+          filters:
+            tags:
+              only: /v[0-9]+(\.[0-9]+)*(-firefox)*/
             branches:
               ignore: /.*/
