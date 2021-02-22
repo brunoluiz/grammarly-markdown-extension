@@ -1,6 +1,6 @@
 {
   "name": "@brunoluiz/grammarly-markdown-extension",
-  "version": "1.4.2",
+  "version": "1.4.1",
   "description": "🖋 Convert Grammarly to Markdown (browser extension)",
   "main": "index.js",
   "scripts": {
@@ -24,9 +24,9 @@
   },
   "homepage": "https://github.com/brunoluiz/grammarly-markdown-extension#readme",
   "devDependencies": {
-    "@wext/shipit": "git+ssh://git@github.com/LinusU/wext-shipit#260005c37eecf83ab5c6cdee950873d4707eb2da",
+    "@wext/shipit": "^0.2.1",
     "clean-webpack-plugin": "3.0.0",
-    "copy-webpack-plugin": "^7.0.0",
+    "copy-webpack-plugin": "5.0.5",
     "css-loader": "3.2.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
@@ -40,7 +40,7 @@
     "style-loader": "1.0.0",
     "webpack": "4.41.2",
     "webpack-cli": "3.3.10",
-    "webpack-dev-server": "^3.11.2",
+    "webpack-dev-server": "3.9.0",
     "write-file-webpack-plugin": "4.5.1"
   },
   "dependencies": {
