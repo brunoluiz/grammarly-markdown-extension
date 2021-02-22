@@ -43,12 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
             replacement: (content) => `### ${content}\n`,
           });
 
-          const { content, title } = response;
+          const { content, title, error } = response;
           if (!content) {
-            return setMessage({
-              msg: "🚨 Error on getting content",
-              type: MESSAGE_ERROR,
-            });
+            const msg = error ? `🚨 ${error}` : `🚨 Unexpected error`;
+            return setMessage({ msg, type: MESSAGE_ERROR });
           }
 
           try {
