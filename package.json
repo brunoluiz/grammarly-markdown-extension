@@ -1,6 +1,6 @@
 {
   "name": "@brunoluiz/grammarly-markdown-extension",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "🖋 Convert Grammarly to Markdown (browser extension)",
   "main": "index.js",
   "scripts": {
