@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
           escapeBackticks: true,
         },
         ({ turndown, escapeBackticks }) => {
-          const turndownService = new TurndownService(turndown);
+          const turndownService = new window.TurndownService(turndown);
           turndownService.addRule("h1", {
             filter: ["h1"],
             replacement: (content) => `## ${content}\n`,
