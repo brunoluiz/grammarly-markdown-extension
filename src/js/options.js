@@ -1,5 +1,3 @@
-import "../css/options.css";
-
 // Saves options to chrome.storage
 const saveOptions = () => {
   chrome.storage.sync.set({

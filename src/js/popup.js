@@ -1,9 +1,3 @@
-import * as TurndownService from "turndown/lib/turndown.browser.umd.js";
-
-import "../css/popup.css";
-import "../img/icon-48.png";
-import "../img/icon-128.png";
-
 const MESSAGE_SUCCESS = "success";
 const MESSAGE_ERROR = "error";
 
@@ -32,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
           escapeBackticks: true,
         },
         ({ turndown, escapeBackticks }) => {
-          const turndownService = new TurndownService(turndown);
+          const turndownService = new window.TurndownService(turndown);
           turndownService.addRule("h1", {
             filter: ["h1"],
             replacement: (content) => `## ${content}\n`,
