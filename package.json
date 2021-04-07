@@ -2,12 +2,9 @@
   "name": "@brunoluiz/grammarly-markdown-extension",
   "version": "1.4.3",
   "description": "🖋 Convert Grammarly to Markdown (browser extension)",
-  "main": "index.js",
   "scripts": {
     "lint": "eslint ./src",
-    "build": "node utils/build.js",
-    "start": "node utils/webserver.js",
-    "test": "echo 'no tests'",
+    "build": "rm -rf build && mkdir build && cp -R LICENSE manifest.json ./src ./build ",
     "deploy:chrome": "shipit chrome ./build",
     "deploy:firefox": "shipit firefox ./build",
     "deploy:landing": "gh-pages --dist ./public "
