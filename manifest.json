@@ -5,7 +5,7 @@
   "author": "Bruno Luiz Silva <contact@brunoluiz.net>",
   "content_scripts": [
     {
-      "matches": ["https://app.grammarly.com/*"],
+      "matches": ["*://*.grammarly.com/*"],
       "all_frames": true,
       "js":      ["src/js/content.js"]
     }
@@ -22,7 +22,7 @@
     "storage",
     "activeTab",
     "clipboardWrite",
-    "https://app.grammarly.com/*"
+    "*://*.grammarly.com/*"
   ],
   "icons": {
     "48": "src/img/icon-48.png",
