@@ -1,20 +1,21 @@
 {
   "manifest_version": 2,
+  "version": "1.5.0",
   "name": "Grammarly to Markdown",
   "author": "Bruno Luiz Silva <contact@brunoluiz.net>",
   "content_scripts": [
     {
       "matches": ["https://app.grammarly.com/*"],
       "all_frames": true,
-      "js":      ["content.bundle.js"]
+      "js":      ["src/js/content.js"]
     }
   ],
-  "options_page": "options.html",
+  "options_page": "src/options.html",
   "browser_action": {
-    "default_popup": "popup.html",
+    "default_popup": "src/popup.html",
     "default_icon": {
-      "48": "icon-48.png",
-      "128": "icon-128.png"
+      "48": "src/img/icon-48.png",
+      "128": "src/img/icon-128.png"
     }
   },
   "permissions": [
@@ -24,8 +25,8 @@
     "https://app.grammarly.com/*"
   ],
   "icons": {
-    "48": "icon-48.png",
-    "128": "icon-128.png"
+    "48": "src/img/icon-48.png",
+    "128": "src/img/icon-128.png"
   },
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "browser_specific_settings": {
