@@ -12,12 +12,14 @@ const saveOptions = () => {
     escapeBackticks: !!document.getElementById("turndown-escapeBackticks")
       .checked,
   });
+  alert("Settings saved");
 };
 
 const restoreOptions = () => {
   chrome.storage.sync.get(
     {
       turndown: {
+        linkStyle: "referenced",
         bulletListMarker: "-",
         listStyle: "referenced",
         strongDelimiter: "**",

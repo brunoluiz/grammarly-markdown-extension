@@ -39,3 +39,31 @@ a:hover {
 a:active {
   color: #91d5ff
 }
+
+#options {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+#options h1 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+label[for="turndown-escapeBackticks"], input[name="turndown-escapeBackticks"]  {
+  display: inline-block;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 5px;
+  width: 100%;
+  display: block;
+}
