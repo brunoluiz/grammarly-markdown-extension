@@ -7,7 +7,8 @@
     "build": "rm -rf build && mkdir build && cp -R LICENSE manifest.json ./src ./build ",
     "deploy:chrome": "shipit chrome ./build",
     "deploy:firefox": "shipit firefox ./build",
-    "deploy:landing": "gh-pages --dist ./public "
+    "deploy:landing": "gh-pages --dist ./public ",
+    "version": "node bump-manifest.js $npm_package_version && git add --all"
   },
   "repository": {
     "type": "git",
