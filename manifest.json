@@ -1,13 +1,17 @@
 {
   "manifest_version": 2,
-  "version": "1.6.0",
+  "version": "1.7.0",
   "name": "Grammarly to Markdown",
   "author": "Bruno Luiz Silva <contact@brunoluiz.net>",
   "content_scripts": [
     {
-      "matches": ["*://*.grammarly.com/*"],
+      "matches": [
+        "*://*.grammarly.com/*"
+      ],
       "all_frames": true,
-      "js":      ["src/js/content.js"]
+      "js": [
+        "src/js/content.js"
+      ]
     }
   ],
   "options_page": "src/options.html",
