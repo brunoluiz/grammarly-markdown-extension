@@ -21,18 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     chrome.tabs.sendMessage(tabs[0].id, {}, (response = {}) => {
       chrome.storage.sync.get(
-        {
-          turndown: {},
-          escapeBackticks: true,
-        },
-        ({ turndown, escapeBackticks }) => {
-          const turndownService = new window.TurndownService(turndown);
-          turndownService.addRule("h1", {
+        window.G2M_DEFAULT_SETTINGS,
+        ({ turndown: settings, escapeBackticks }) => {
+          const service = new window.TurndownService(settings);
+          service.addRule("h1", {
             filter: ["h1"],
             replacement: (content) => `## ${content}\n`,
           });
 
-          turndownService.addRule("h2", {
+          service.addRule("h2", {
             filter: ["h2"],
             replacement: (content) => `### ${content}\n`,
           });
@@ -46,10 +43,15 @@ document.addEventListener("DOMContentLoaded", () => {
           try {
             let markdown = "";
             markdown += `# ${title}\n\n`;
-            markdown += turndownService.turndown(content);
+            markdown += service.turndown(content);
             if (!escapeBackticks) {
               markdown = markdown.replaceAll("\\`", "`");
             }
+
+            markdown = markdown.replaceAll("\n  \n", "");
+            markdown = markdown.replaceAll("-   ", "- ");
+            markdown = markdown.replaceAll("*   ", "* ");
+            markdown = markdown.replaceAll("+   ", "+ ");
 
             copyToClipboard(markdown);
             setMessage({

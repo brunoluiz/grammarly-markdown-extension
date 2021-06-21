@@ -16,30 +16,18 @@ const saveOptions = () => {
 };
 
 const restoreOptions = () => {
-  chrome.storage.sync.get(
-    {
-      turndown: {
-        linkStyle: "referenced",
-        bulletListMarker: "-",
-        listStyle: "referenced",
-        strongDelimiter: "**",
-        emDelimiter: "_",
-      },
-      escapeBackticks: true,
-    },
-    (items) => {
-      document.getElementById("turndown-linkSyle").value =
-        items.turndown.linkStyle;
-      document.getElementById("turndown-bulletListMarker").value =
-        items.turndown.bulletListMarker;
-      document.getElementById("turndown-emDelimiter").value =
-        items.turndown.emDelimiter;
-      document.getElementById("turndown-strongDelimiter").value =
-        items.turndown.strongDelimiter;
-      document.getElementById("turndown-escapeBackticks").checked =
-        items.escapeBackticks;
-    }
-  );
+  chrome.storage.sync.get(window.G2M_DEFAULT_SETTINGS, (items) => {
+    document.getElementById("turndown-linkSyle").value =
+      items.turndown.linkStyle;
+    document.getElementById("turndown-bulletListMarker").value =
+      items.turndown.bulletListMarker;
+    document.getElementById("turndown-emDelimiter").value =
+      items.turndown.emDelimiter;
+    document.getElementById("turndown-strongDelimiter").value =
+      items.turndown.strongDelimiter;
+    document.getElementById("turndown-escapeBackticks").checked =
+      items.escapeBackticks;
+  });
 };
 
 document.addEventListener("DOMContentLoaded", restoreOptions);
