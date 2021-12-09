@@ -2,6 +2,8 @@
 
 🖋 Convert Grammarly to Markdown (browser extension)
 
+## Installation
+- Install the extensions from [The Chrome web store](https://chrome.google.com/webstore/detail/grammarly-to-markdown/bjodbpcjeogaihbekannledankhcjbgo).
 ## Usage
 
 1. Open any document in Grammarly -- URL might be `https://app.grammarly.com/ddocs/*`
