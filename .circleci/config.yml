@@ -24,7 +24,19 @@ jobs:
           key: npm-deps-{{ checksum "package-lock.json" }}
       - run: npm run lint
 
-  deploy:
+  deploy-v1:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: npm-deps-{{ checksum "package-lock.json" }}
+      - restore_cache:
+          key: npm-build-{{ .Branch }}-{{ .Revision }}
+      - run: NODE_ENV=production npm run build
+      - run: npm run deploy:firefox
+
+  # This job is temporary, until Firefox implements Manifest V3 APIs
+  deploy-v2:
     <<: *defaults
     steps:
       - checkout
@@ -34,7 +46,6 @@ jobs:
           key: npm-build-{{ .Branch }}-{{ .Revision }}
       - run: NODE_ENV=production npm run build
       - run: npm run deploy:chrome
-      - run: npm run deploy:firefox
 
 workflows:
   version: 2
@@ -55,12 +66,21 @@ workflows:
             branches:
               only: /.*/
 
-      - deploy:
+      - deploy-v1:
           requires:
             - test
           filters:
             tags:
-              only: /v[0-9]+(\.[0-9]+)*(-.*)*/
+              only: /v1+(\.[0-9]+)*(-.*)*/
             branches:
               ignore: /.*/
 
+      # This job is temporary, until Firefox implements Manifest V3 APIs
+      - deploy-v2:
+          requires:
+            - test
+          filters:
+            tags:
+              only: /v[2-9]+(\.[0-9]+)*(-.*)*/
+            branches:
+              ignore: /.*/
