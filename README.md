@@ -2,6 +2,17 @@
 
 🖋 Convert Grammarly to Markdown (browser extension)
 
+## Version and branch details
+
+In January 17 2022, Chrome Web Store will not accept Manifest V2 extensions anymore. As Firefox
+Manifest V3 is still not released, this extension is split in two branches:
+
+- `main`: mirrors the latest version available (currently `v2`)
+- `v1`: version using Manifest V2 APIs
+- `v2`: version using Manifest V3 APIs
+
+Currently the changes only affect `manifest.json`, so there shouldn't be any major differences.
+
 ## Installing pre-packaged extension
 
 This extension is available in the following stores:
