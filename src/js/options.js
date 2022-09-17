@@ -8,6 +8,8 @@ const saveOptions = () => {
       emDelimiter: document.getElementById("turndown-emDelimiter").value,
       strongDelimiter: document.getElementById("turndown-strongDelimiter")
         .value,
+      escapeMarkdown: document.getElementById("turndown-escapeMarkdown")
+      .value
     },
     escapeBackticks: !!document.getElementById("turndown-escapeBackticks")
       .checked,

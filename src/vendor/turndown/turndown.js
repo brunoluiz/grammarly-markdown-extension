@@ -835,9 +835,13 @@ var TurndownService = (function () {
      */
 
     escape: function (string) {
-      return escapes.reduce(function (accumulator, escape) {
-        return accumulator.replace(escape[0], escape[1])
-      }, string)
+      if(this.options.escapeMarkdown){
+        return escapes.reduce(function (accumulator, escape) {
+          return accumulator.replace(escape[0], escape[1])
+        }, string)
+      }else{
+        return string
+      }
     }
   };
 
