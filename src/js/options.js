@@ -8,10 +8,10 @@ const saveOptions = () => {
       emDelimiter: document.getElementById("turndown-emDelimiter").value,
       strongDelimiter: document.getElementById("turndown-strongDelimiter")
         .value,
-      escapeMarkdown: document.getElementById("turndown-escapeMarkdown")
-        .checked,
     },
     escapeBackticks: !!document.getElementById("turndown-escapeBackticks")
+      .checked,
+    escapeMarkdown: document.getElementById("turndown-escapeMarkdown")
       .checked,
   });
   alert("Settings saved");
@@ -19,18 +19,18 @@ const saveOptions = () => {
 
 const restoreOptions = () => {
   chrome.storage.sync.get(window.G2M_DEFAULT_SETTINGS, (items) => {
-    document.getElementById("turndown-linkSyle").value = 
+    document.getElementById("turndown-linkSyle").value =
       items.turndown.linkStyle;
-    document.getElementById("turndown-bulletListMarker").value = 
+    document.getElementById("turndown-bulletListMarker").value =
       items.turndown.bulletListMarker;
-    document.getElementById("turndown-emDelimiter").value = 
+    document.getElementById("turndown-emDelimiter").value =
       items.turndown.emDelimiter;
-    document.getElementById("turndown-strongDelimiter").value = 
+    document.getElementById("turndown-strongDelimiter").value =
       items.turndown.strongDelimiter;
-    document.getElementById("turndown-escapeBackticks").checked = 
+    document.getElementById("turndown-escapeBackticks").checked =
       items.escapeBackticks;
-    document.getElementById("turndown-escapeMarkdown").checked = 
-      items.turndown.escapeMarkdown;
+    document.getElementById("turndown-escapeMarkdown").checked =
+      items.escapeMarkdown;
   });
 };
 
