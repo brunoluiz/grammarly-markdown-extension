@@ -24,10 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
         window.G2M_DEFAULT_SETTINGS,
         ({ turndown: settings, escapeBackticks, escapeMarkdown }) => {
           if (!escapeMarkdown) {
-            TurndownService.prototype.escape = function (string) {
+            window.TurndownService.prototype.escape = function (string) {
               return string;
             };
           }
+
           const service = new window.TurndownService(settings);
           service.addRule("h1", {
             filter: ["h1"],
