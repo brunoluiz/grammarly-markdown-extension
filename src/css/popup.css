@@ -1,6 +1,8 @@
 body {
   padding: 8px 10px;
-  font-family: helvetica neue,Helvetica,-apple-system,BlinkMacSystemFont,segoe ui,pingfang sc,hiragino sans gb,microsoft yahei,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+  font-family: helvetica neue, Helvetica, -apple-system, BlinkMacSystemFont,
+    segoe ui, pingfang sc, hiragino sans gb, microsoft yahei, Arial, sans-serif,
+    apple color emoji, segoe ui emoji, segoe ui symbol;
   font-size: 100%;
   width: 200px;
 }
@@ -17,11 +19,11 @@ p {
 }
 
 .success {
-  color: #389e0d
+  color: #389e0d;
 }
 
 .error {
-  color: #fa541c
+  color: #fa541c;
 }
 
 #message {
@@ -29,15 +31,15 @@ p {
 }
 
 a {
-  color: #1890ff
+  color: #1890ff;
 }
 
 a:hover {
-  color: #69c0ff
+  color: #69c0ff;
 }
 
 a:active {
-  color: #91d5ff
+  color: #91d5ff;
 }
 
 #options {
@@ -56,13 +58,18 @@ label {
   margin-bottom: 10px;
 }
 
-label[for="turndown-escapeBackticks"], input[name="turndown-escapeBackticks"], label[for="turndown-escapeMarkdown"], input[name="turndown-escapeMarkdown"]  {
+label[for="turndown-escapeBackticks"],
+input[name="turndown-escapeBackticks"],
+label[for="turndown-escapeMarkdown"],
+input[name="turndown-escapeMarkdown"] {
   display: inline-block;
   width: auto;
   margin-bottom: 20px;
 }
 
-input, select, button {
+input,
+select,
+button {
   padding: 5px;
   width: 100%;
   display: block;

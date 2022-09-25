@@ -2,51 +2,63 @@
 <html>
   <head>
     <title>Grammarly to Markdown: Options</title>
-    <link rel='stylesheet' href='./css/popup.css' />
+    <link rel="stylesheet" href="./css/popup.css" />
   </head>
-  <body id='options'>
+  <body id="options">
     <h1>Grammarly to Markdown</h1>
 
     <label for="turndown-linkSyle">Choose link style:</label>
     <select name="turndown-linkSyle" id="turndown-linkSyle">
-        <option value="referenced">Referenced</option>
-        <option value="inlined">Inlined</option>
+      <option value="referenced">Referenced</option>
+      <option value="inlined">Inlined</option>
     </select>
-    </br>
+    <br />
 
     <label for="turndown-bulletListMarker">Choose list style:</label>
     <select name="turndown-bulletListMarker" id="turndown-bulletListMarker">
-        <option value="-">Dash -</option>
-        <option value="*">Asterisk *</option>
-        <option value="+">Plus +</option>
+      <option value="-">Dash -</option>
+      <option value="*">Asterisk *</option>
+      <option value="+">Plus +</option>
     </select>
-    </br>
+    <br />
 
     <label for="turndown-emDelimiter">Choose <em>italic</em> style:</label>
     <select name="turndown-emDelimiter" id="turndown-emDelimiter">
-        <option value="_">Underscore _</option>
-        <option value="*">Asterisk *</option>
+      <option value="_">Underscore _</option>
+      <option value="*">Asterisk *</option>
     </select>
-    </br>
+    <br />
 
-    <label for="turndown-strongDelimiter">Choose <strong>bold</strong> style:</label>
+    <label for="turndown-strongDelimiter"
+      >Choose <strong>bold</strong> style:</label
+    >
     <select name="turndown-strongDelimiter" id="turndown-strongDelimiter">
-        <option value="**">Asterisk **</option>
-        <option value="__">Underscore __</option>
+      <option value="**">Asterisk **</option>
+      <option value="__">Underscore __</option>
     </select>
-    </br>
+    <br />
 
     <label for="turndown-escapeBackticks">Escape (`) backticks?</label>
-    <input type="checkbox" id="turndown-escapeBackticks" name="turndown-escapeBackticks">
-    </br>
+    <input
+      type="checkbox"
+      id="turndown-escapeBackticks"
+      name="turndown-escapeBackticks"
+    />
+    <br />
 
     <label for="turndown-escapeMarkdown">Escape markdown characters?</label>
-    <input type="checkbox" id="turndown-escapeMarkdown" name="turndown-escapeMarkdown">
-    </br>
+    <input
+      type="checkbox"
+      id="turndown-escapeMarkdown"
+      name="turndown-escapeMarkdown"
+    />
+    <br />
 
     <button id="save">Save</button>
 
-    <p><a href='https://brunoluiz.net' target='_blank'>By Bruno Luiz Silva</a></p>
+    <p>
+      <a href="https://brunoluiz.net" target="_blank">By Bruno Luiz Silva</a>
+    </p>
     <script src="./js/globals.js"></script>
     <script src="./js/options.js"></script>
   </body>

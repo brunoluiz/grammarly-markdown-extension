@@ -11,8 +11,7 @@ const saveOptions = () => {
     },
     escapeBackticks: !!document.getElementById("turndown-escapeBackticks")
       .checked,
-    escapeMarkdown: document.getElementById("turndown-escapeMarkdown")
-      .checked,
+    escapeMarkdown: document.getElementById("turndown-escapeMarkdown").checked,
   });
   alert("Settings saved");
 };
