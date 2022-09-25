@@ -7,4 +7,5 @@ window.G2M_DEFAULT_SETTINGS = Object.freeze({
     emDelimiter: "_",
   },
   escapeBackticks: false,
+  escapeMarkdown: true,
 });

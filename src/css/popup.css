@@ -56,7 +56,7 @@ label {
   margin-bottom: 10px;
 }
 
-label[for="turndown-escapeBackticks"], input[name="turndown-escapeBackticks"]  {
+label[for="turndown-escapeBackticks"], input[name="turndown-escapeBackticks"], label[for="turndown-escapeMarkdown"], input[name="turndown-escapeMarkdown"]  {
   display: inline-block;
   width: auto;
   margin-bottom: 20px;

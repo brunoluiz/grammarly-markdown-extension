@@ -11,6 +11,8 @@ const saveOptions = () => {
     },
     escapeBackticks: !!document.getElementById("turndown-escapeBackticks")
       .checked,
+    escapeMarkdown: document.getElementById("turndown-escapeMarkdown")
+      .checked,
   });
   alert("Settings saved");
 };
@@ -27,6 +29,8 @@ const restoreOptions = () => {
       items.turndown.strongDelimiter;
     document.getElementById("turndown-escapeBackticks").checked =
       items.escapeBackticks;
+    document.getElementById("turndown-escapeMarkdown").checked =
+      items.escapeMarkdown;
   });
 };
 

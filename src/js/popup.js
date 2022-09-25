@@ -22,7 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
     chrome.tabs.sendMessage(tabs[0].id, {}, (response = {}) => {
       chrome.storage.sync.get(
         window.G2M_DEFAULT_SETTINGS,
-        ({ turndown: settings, escapeBackticks }) => {
+        ({ turndown: settings, escapeBackticks, escapeMarkdown }) => {
+          if (!escapeMarkdown) {
+            TurndownService.prototype.escape = function (string) {
+              return string;
+            };
+          }
           const service = new window.TurndownService(settings);
           service.addRule("h1", {
             filter: ["h1"],
