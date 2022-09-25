@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "version": "2.0.0",
+  "version": "2.1.0",
   "name": "Grammarly to Markdown",
   "author": "Bruno Luiz Silva <contact@brunoluiz.net>",
   "content_scripts": [
