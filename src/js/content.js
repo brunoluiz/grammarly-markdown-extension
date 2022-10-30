@@ -1,5 +1,5 @@
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  const title = document.querySelector("input[name=header-title-input]");
+  const title = document.querySelector("[data-name=header-title-input]");
   if (!title) {
     return sendResponse({ error: "Error while getting the title" });
   }
@@ -10,7 +10,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   }
 
   return sendResponse({
-    title: title.value,
+    title: title.textContent,
     content: content.innerHTML,
   });
 });
