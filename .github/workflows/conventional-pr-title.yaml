@@ -1,0 +1,23 @@
+name: Check PR title
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - edited
+      - synchronize
+
+jobs:
+  pr_title:
+    name: Pull Request title
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate Pull Request title
+        uses: amannn/action-semantic-pull-request@v5.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        with:
+          ignoreLabels: |
+            bot
+            ignore-semantic-pull-request
