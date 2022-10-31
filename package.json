@@ -1,6 +1,6 @@
 {
   "name": "@brunoluiz/grammarly-markdown-extension",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "🖋 Convert Grammarly to Markdown (browser extension)",
   "scripts": {
     "lint": "eslint ./src",
